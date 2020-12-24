@@ -1,0 +1,42 @@
+@import '../../styles/index.less';
+
+.tabHeaderContainer {
+	background: @color-white;
+	padding: 0 24px;
+
+	.tabHeader {
+		position: relative;
+
+		.tabList {
+			display: flex;
+			border-bottom: 1px solid @color-border;
+			height: 50px;
+
+			.tabItem {
+				height: 100%;
+				line-height: 50px;
+				min-width: 112px;
+				padding: 0 12px;
+				cursor: pointer;
+				text-align: center;
+				color: @color-font-gay;
+
+				&.actived {
+					color: @color-primary;
+				}
+			}
+		}
+
+		.headerSelectBar {
+			height: 2px;
+			background: @color-primary;
+			position: absolute;
+			display: inline-block;
+			left: 0;
+			bottom: 0;
+			transition: all 0.3s ease-in;
+		}
+	}
+
+
+}

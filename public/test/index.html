@@ -1,0 +1,77 @@
+<!--
+ * @Description:
+ * @Author: zhao
+ * @Date: 2019-11-11 09:56:41
+ * @LastEditors: zhao
+ * @LastEditTime: 2019-11-12 17:26:12
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="x5-orientation" content="portrait" />
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+
+	<!-- Demo styles -->
+	<style>
+		html,
+		body {
+			background: #ffffff;
+			font-size: 14px;
+			margin: 0;
+			padding: 0;
+		}
+
+		* {
+			word-break: break-all;
+		}
+
+		#content {
+			width: 750px;
+			height: 750px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content"></div>
+	<script src="./index.js"></script>
+	<script>
+		var index = 0;
+		var turnTable = new TurnTable({ element: document.getElementById('content') })
+		turnTable.setOptions({
+			backgroundImage: './image/img_turntable.png',
+			rewardList: [
+				{ name: '一等奖', url: './image/prize_01.png' },
+				{ name: '二等奖', url: './image/prize_02.png' },
+				{ name: '三等奖', url: './image/prize_03.png' },
+				{ name: '四等奖', url: './image/prize_04.png' },
+				{ name: '五等奖', url: './image/prize_05.png' },
+				{ name: '六等级', url: './image/prize_06.png' },
+				{ name: '七等奖', url: './image/prize_07.png' },
+				{ name: '八等奖', url: './image/prize_08.png' },
+				{ name: '谢谢参与', url: './image/prize_xxcy.png' },
+			],
+			scale: 0.7,
+			pointer: {
+				url: './image/img_hand.png',
+				width: '360px',
+				height: '360px',
+			},
+			onStart: function () {
+				turnTable.startRound(index);
+			}
+		});
+	</script>
+</body>
+
+</html>

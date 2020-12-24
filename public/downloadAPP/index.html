@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="x5-orientation" content="portrait" />
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>app下载</title>
+	<script>
+		!function (e, t) {
+			function n() {
+				t.body ? t.body.style.fontSize = 12 * o + 'px' : t.addEventListener('DOMContentLoaded', n);
+			}
+
+			function d() {
+				var e = i.clientWidth / 10;
+				i.style.fontSize = e + 'px';
+			}
+
+			var i = t.documentElement, o = e.devicePixelRatio || 1;
+			if (n(), d(), e.addEventListener('resize', d), e.addEventListener('pageshow', function (e) {
+				e.persisted && d();
+			}), o >= 2) {
+				var a = t.createElement('body'), s = t.createElement('div');
+				s.style.border = '.5px solid transparent', a.appendChild(s), i.appendChild(a), 1 === s.offsetHeight && i.classList.add('hairlines'), i.removeChild(a);
+			}
+		}(window, document);
+	</script>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			-ms-text-size-adjust: none;
+			-webkit-text-size-adjust: none;
+		}
+
+		body,
+		img {
+			margin: 0;
+			padding: 0;
+		}
+
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		div {
+			font-size: 14px;
+		}
+	</style>
+</head>
+
+<body style="background-color:#f6f6f6;">
+	<div id="ios">很抱歉，目前iOS版还没开通，敬请期待。</div>
+	<div id="Android">
+		<img src="./img_ts.png" alt="" />
+	</div>
+</body>
+<script type="text/javascript">
+	const userAgent = navigator.userAgent;
+	const re = /micromessenger/;
+	const url = '../api/api/sys/appUpgrade/getApk'
+	if ((userAgent.indexOf('iPhone') != -1) || (userAgent.indexOf('iPad') != -1) || (userAgent.indexOf('iPod') != -1)) {
+		document.getElementById('ios').style.display = 'block';
+		document.getElementById('Android').style.display = 'none';
+	} else if (userAgent.indexOf('Android') != -1) {
+		if (re.test(userAgent.toLowerCase())) {
+			document.getElementById('ios').style.display = 'none';
+			document.getElementById('Android').style.display = 'block';
+		} else {
+			document.getElementById('ios').style.display = 'none';
+			document.getElementById('Android').style.display = 'none';
+			window.location = url;
+		}
+	} else {
+		window.location = url;
+	}
+
+</script>
+
+</html>

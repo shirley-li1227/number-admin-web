@@ -1,0 +1,27 @@
+@import "../variables.less";
+
+.text-overflow() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// 单行显示省略号
+.single-ellipsis() {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// more ellipsis
+.more-ellipsis(@line: 3) {
+	display: -webkit-box;
+  	/*! autoprefixer: off */
+  	-webkit-box-orient: vertical; // 参考 https://github.com/postcss/autoprefixer/issues/776
+  	/*! autoprefixer: on */
+  	-webkit-line-clamp: @line;  //这里是在第三行有省略号
+  	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}

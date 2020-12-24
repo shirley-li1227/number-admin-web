@@ -1,0 +1,16 @@
+module.exports = {
+	'openCodeRelationRecord.router.title': '同步关联数据',
+	'openCodeRelationRecord.originalFileName.label': '文件名称',
+	'openCodeRelationRecord.recordStatus.label': '处理状态',
+	'openCodeRelationRecord.beginWorkTime.label': '开始处理时间',
+	'openCodeRelationRecord.endWorkTime.label': '结束处理时间',
+	'openCodeRelationRecord.successQty.label': '成功数量',
+	'openCodeRelationRecord.errorQty.label': '失败数量',
+	'openCodeRelationRecord.errMsg.label': '失败原因',
+	'openCodeRelationRecord.code.label': '编码',
+	'openCodeRelationRecord.productName.label': '产品名称',
+	'openCodeRelationRecord.batchCode.label': '批号',
+	'openCodeRelationRecord.packDate.label': '生产日期',
+	'openCodeRelationRecord.qty.label': '编码数量',
+	'openCodeRelationRecord.relationTime.label': '同步时间',
+};

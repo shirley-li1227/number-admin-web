@@ -1,0 +1,103 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../styles/index.less';
+
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
+
+.header {
+	position: fixed;
+    height: 64px;
+	padding: 0 20px;
+	top: 0;
+	right: 0;
+    background: @color-white;
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+	z-index: 999;
+
+	transition: all 0.3s;
+	border-bottom: 1px solid @color-border;
+
+	.collapsed {
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+
+		i {
+			font-size: 24px;
+		}
+
+		&:hover {
+			i {
+				color: @color-primary;
+			}
+		}
+	}
+
+	.lang {
+		margin-left: 10px;
+		display: inline-block;
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+
+
+
+
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    width: 140px;
+  }
+}
+
+i.trigger {
+  font-size: 20px;
+  height: 64px;
+  cursor: pointer;
+  transition: all 0.3s, padding 0s;
+  padding: 22px 24px;
+  &:hover {
+    background: @pro-header-hover-bg;
+  }
+}
+
+.action {
+    cursor: pointer;
+    padding: 0 12px;
+	display: inline-flex;
+	align-items: center;
+    transition: all 0.3s;
+}
+
+.notice {
+	i {
+		font-size: 20px;
+	}
+
+    margin-right: 20px;
+}
+
+.account {
+
+	.username {
+		margin-right: 10px;
+	}
+
+}
+
+.badge {
+	:global(.ant-badge-count) {
+		right: -7px;
+		transform: scale(0.8);
+		box-shadow: none;
+	}
+}

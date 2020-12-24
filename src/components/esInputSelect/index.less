@@ -1,0 +1,22 @@
+@import "../../styles/index.less";
+
+.esInputSelect {
+	width: 100%;
+	max-width: @fieldMaxWidth;
+
+	.numberInput {
+		width: 60%;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-right: 0;
+	}
+
+	.typeSelect {
+		width: 40%;
+
+		:global(.ant-select-selection) {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}

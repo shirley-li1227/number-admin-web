@@ -1,0 +1,16 @@
+module.exports = { 
+	'openCodeRelationRecord.router.title': 'Synchronized Assigned Data',
+	'openCodeRelationRecord.originalFileName.label': 'File name',
+	'openCodeRelationRecord.recordStatus.label': 'Processing status',
+	'openCodeRelationRecord.beginWorkTime.label': 'Begin procesing Time',
+	'openCodeRelationRecord.endWorkTime.label': 'End processing Time',
+	'openCodeRelationRecord.successQty.label': 'Number of successes',
+	'openCodeRelationRecord.errorQty.label': 'Number of failures',
+	'openCodeRelationRecord.errMsg.label': 'Reasons of failure',
+	'openCodeRelationRecord.code.label': 'Code',
+	'openCodeRelationRecord.productName.label': 'Product name',
+	'openCodeRelationRecord.batchCode.label': 'Batch',
+	'openCodeRelationRecord.packDate.label': 'Production date',
+	'openCodeRelationRecord.qty.label': 'Number of codes',
+	'openCodeRelationRecord.relationTime.label': 'Synchronization time',
+};

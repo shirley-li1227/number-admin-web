@@ -1,0 +1,41 @@
+
+.previewContainer {
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		user-select: none;
+	}
+
+	.buttonLeft, .buttonRight {
+		position: absolute;
+		color: #ffffff;
+		font-size: 32px;
+		top: 48%;
+		cursor: pointer;
+		z-index: 99;
+	}
+
+	.buttonLeft {
+		left: 100px;
+	}
+
+	.buttonRight {
+		right: 100px;
+	}
+}
+
+.hide {
+	display: none;
+}

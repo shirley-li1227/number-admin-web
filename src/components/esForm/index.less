@@ -1,0 +1,85 @@
+@import "../../styles/index.less";
+
+.esFormDiv {
+	.itemCol {
+		flex: 1;
+	}
+
+	.formTitle {
+		font-size: @font-size-block-title;
+		height: 30px;
+		border-bottom: 1px solid @color-border;
+		margin-bottom: 20px;
+	}
+
+	.formContent {
+		background: @color-white;
+		padding: 20px;
+		padding-bottom: 4px;
+
+		margin-bottom: 12px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	.btnList {
+		display: inline-block;
+
+		button {
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	:global(.ant-form-item-control-wrapper) {
+		min-height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 500px;
+		word-break: break-all;
+	}
+
+	:global(.ant-form-item-control){
+		text-align: left;
+		width: 100%;
+		line-height: 1;
+	}
+
+	:global(.ant-form-extra){
+		position: relative;
+		color: @color-font-tip;
+		font-size: @font-size-small;
+		line-height: @font-size-normal;
+	}
+
+	:global(.ant-input){
+		max-width: 320px;
+	}
+
+	:global(.ant-input-number){
+		width: 100%;
+		max-width: 320px;
+	}
+
+	:global(.ant-select){
+		max-width: 320px;
+	}
+
+	:global(.ant-cascader-picker){
+		max-width: 320px;
+	}
+
+	:global(.ant-calendar-picker){
+		max-width: 320px;
+		width: 100%;
+	}
+}
+.tipIcon {
+	margin-left: 5px;
+}
