@@ -5,8 +5,8 @@ module.exports = [
 		component: "../layouts/userLayout",
 		routes: [
 			{ path: "/user", redirect: "/user/login" },
-			{ path: "/user/login", component: "./user/login" },
-		],
+			{ path: "/user/login", component: "./user/login" }
+		]
 	},
 	// app
 	{
@@ -17,40 +17,40 @@ module.exports = [
 			{
 				path: "/noAuth",
 				name: "router.name.noAuth",
-				component: "./noAuth",
+				component: "./noAuth"
 			},
 
 			/**** 首页 ******/
 			{
 				path: "/",
 				name: "router.name.home",
-				component: "./home",
+				component: "./home"
 			},
 			{
 				path: "/shop/list",
 				name: "router.name.shop",
-				component: "./shop",
+				component: "./shop"
 			},
 			{
 				path: "/shop/list/create",
-				name: "router.name.shop",
-				component: "./shop/edit",
+				name: "common.create",
+				component: "./shop/edit"
 			},
 			{
 				path: "/shop/list/edit",
-				name: "router.name.shop",
-				component: "./shop/edit",
+				name: "common.edit",
+				component: "./shop/edit"
 			},
 
 			{
 				path: "/500",
 				name: "500",
-				component: "./500",
+				component: "./500"
 			},
 			{
 				name: "404",
-				component: "./404",
-			},
-		],
-	},
+				component: "./404"
+			}
+		]
+	}
 ];

@@ -121,8 +121,7 @@ const OrgCustomerEdit = ({ location, dispatch, orgCustomerEdit, loading }) => {
 								message:
 									localeMessage("common.test.required") +
 									localeMessage("orgCustomer.code.label")
-							},
-							{ validator: checkNameIsExisted }
+							}
 						]
 					},
 					{
@@ -143,22 +142,6 @@ const OrgCustomerEdit = ({ location, dispatch, orgCustomerEdit, loading }) => {
 							}
 						],
 						value: detail.name
-					},
-					{
-						type: "input",
-						keyword: "uscc",
-						label: localeMessage("brand.label.uscc"),
-						placeholder: localeMessage("common.test.max", {
-							max: 18
-						}),
-						maxLength: 18,
-						value: detail.uscc,
-						rules: [
-							{
-								whitespace: true,
-								message: localeMessage("common.test.whitespace")
-							}
-						]
 					},
 					{
 						type: "cascader",
@@ -201,49 +184,6 @@ const OrgCustomerEdit = ({ location, dispatch, orgCustomerEdit, loading }) => {
 								message: localeMessage("common.test.whitespace")
 							}
 						]
-					},
-					{
-						type: "radioButton",
-						keyword: "salesScopeOverseas",
-						label: <label />,
-						colon: false,
-						options: [
-							{
-								id: false,
-								name: localeMessage("orgCustomer.inChina")
-							},
-							{
-								id: true,
-								name: localeMessage("orgCustomer.outChina")
-							}
-						],
-						value: isAbroad,
-						buttonStyle: "solid",
-						onChange: onDomesticChange
-					},
-					{
-						type: "treeSelectMultiple",
-						keyword: "saleRegionId",
-						label: localeMessage(
-							"common.label.salesScopeRegionNames"
-						),
-						placeholder:
-							localeMessage("common.test.selectRequired") +
-							localeMessage("common.label.salesScopeRegionNames"),
-						treeData: isAbroad
-							? worldList.map(obj => ({
-									...obj,
-									value: obj.id,
-									title: obj.enName
-							  }))
-							: treeList,
-						value:
-							detail.salesScopeRegionIds &&
-							detail.salesScopeRegionIds.split(","),
-						extra: localeMessage(
-							"orgCustomer.salesScopeRegionNames.extra"
-						),
-						onChange: onMapSelectHandler
 					}
 				]
 			}

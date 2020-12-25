@@ -49,14 +49,14 @@ export default function request(
 	url,
 	{ method = "get", data, formData = false, ContentType } = {}
 ) {
-	const token = localStorage.getItem("X-CSRF-TOKEN");
-	console.log("token :>> ", token);
+	const token = localStorage.getItem("admin-token");
 	const defaultHeader = {
-		// "X-Requested-With": "XMLHttpRequest",
-		"X-CSRF-TOKEN": token
+		// "X-Requested-With": "XMLHttpRequest"
+		// JSESSIONID: "dingtalk-admin"
 	};
+	if (token) defaultHeader["X-CSRF-TOKEN"] = token;
 	const options = {
-		// credentials: "omit",
+		credentials: "same-origin",
 		headers: {
 			"Content-Type": "application/json"
 		},
@@ -113,8 +113,11 @@ export default function request(
 			// DELETE and 204 do not return data by default
 			// using .json will report an error.
 			const token = response.headers.get("X-CSRF-TOKEN");
+			const JSESSIONID = response.headers.get("Set-Cookie");
+			console.log("token :>> ", token);
+			console.log("JSESSIONID :>> ", JSESSIONID);
 			if (token) {
-				localStorage.setItem("X-CSRF-TOKEN", token);
+				localStorage.setItem("admin-token", token);
 			}
 			if (response.status === 204) {
 				return response.text();

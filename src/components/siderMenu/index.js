@@ -190,7 +190,14 @@ export default class SiderMenu extends PureComponent {
 							</span>
 						}
 					>
-						<Menu.Item key="shopList">门店列表</Menu.Item>
+						<Menu.Item
+							onClick={() => {
+								router.push("/shop/list");
+							}}
+							key="shopList"
+						>
+							门店列表
+						</Menu.Item>
 					</SubMenu>
 				</Menu>
 			</div>

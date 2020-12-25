@@ -28,7 +28,7 @@ export default {
 		setup({ dispatch, history }) {
 			return history.listen(({ pathname }) => {
 				if (pathToRegexp("/shop/list").exec(pathname)) {
-					// dispatch({ type: "queryList" });
+					dispatch({ type: "queryList" });
 				}
 			});
 		}
@@ -45,10 +45,11 @@ export default {
 			}
 			delete params.treeWithButton;
 			payload = {
-				page: 1,
-				pageSize: 10,
-				isEnabled: 1,
-				...params
+				// page: 1,
+				// pageSize: 10,
+				// isEnabled: 1,
+				isAdmin: 1
+				// ...params
 			};
 
 			const { code, rows, total, errMsg } = yield call(
