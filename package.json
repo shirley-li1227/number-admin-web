@@ -57,7 +57,7 @@
 		"react-favicon": "0.0.17",
 		"react-sortablejs": "1.5.0",
 		"sortablejs": "^1.6.1",
-		"swiper": "^4.5.0",
+		"swiper": "^6.5.1",
 		"uuid-js": "^0.7.5"
 	}
 }
